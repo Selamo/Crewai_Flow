@@ -1,0 +1,30 @@
+research_task:
+  description: >
+    Research the latest developments and trends in {topic}.
+    Focus on finding recent news, statistics, and expert opinions.
+    Identify at least 3-5 key points or trends that would be interesting
+    to readers. Gather specific examples and data to support each point.
+  expected_output: >
+    A detailed research report containing:
+    - 3-5 key trends or developments
+    - Specific examples for each trend
+    - Relevant statistics or data points
+    - Sources for all information
+  agent: researcher
+
+writing_task:
+  description: >
+    Using the research provided, write an engaging blog post about {topic}.
+    The post should be approximately 800 words, well-structured with clear
+    sections, and written in an accessible yet professional tone. Include
+    an attention-grabbing introduction and a thoughtful conclusion.
+  expected_output: >
+    A complete blog post in markdown format with:
+    - Compelling title
+    - Engaging introduction
+    - 3-4 main sections covering the key trends
+    - Conclusion with key takeaways
+    - Approximately 800 words
+  agent: writer
+  context:
+    - research_task
