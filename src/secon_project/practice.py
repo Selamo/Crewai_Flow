@@ -20,7 +20,7 @@ class CustomerFlowState(BaseModel):
     sender_email:Optional[str]=None
 
 class CustomerFlow(Flow[CustomerFlowState]):
-    @start
+    @start()
     def start_executing(self):
         print("Entering the starting phase")
         return "hello, starting "
@@ -29,3 +29,9 @@ class CustomerFlow(Flow[CustomerFlowState]):
     def executing_listening_func(self):
         print("Executing Listening Function")
         return("done executing")
+    
+    
+flow=CustomerFlow()
+results=flow.kickoff()
+print(f"Running")
+flow.plot()
